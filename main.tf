@@ -321,7 +321,7 @@ resource "aws_instance" "reverse_proxy" {
   # INTENTIONALLY using IMDSv1 (vulnerable configuration)
   metadata_options {
     http_endpoint               = "enabled"
-    http_tokens                 = var.use_imdsv2 ? "required" : "optional"  # "optional" = IMDSv1 allowed
+    http_tokens                 = var.use_imdsv2 ? "required" : "optional" # "optional" = IMDSv1 allowed
     http_put_response_hop_limit = 1
     instance_metadata_tags      = "enabled"
   }

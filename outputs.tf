@@ -33,13 +33,13 @@ output "ec2_instance_id" {
 output "s3_bucket_name" {
   description = "Name of the S3 bucket containing sensitive data"
   value       = aws_s3_bucket.cardholder_data.id
-  sensitive   = true  # Hidden by default - this is what you're trying to find!
+  sensitive   = true # Hidden by default - this is what you're trying to find!
 }
 
 output "iam_role_name" {
   description = "Name of the IAM role attached to EC2"
   value       = aws_iam_role.ec2_role.name
-  sensitive   = true  # Hidden by default
+  sensitive   = true # Hidden by default
 }
 
 #-----------------------------------------
@@ -54,9 +54,9 @@ output "imds_version" {
 output "vulnerability_status" {
   description = "Current vulnerability configuration"
   value = {
-    imds_vulnerable    = !var.use_imdsv2
-    ssh_enabled        = var.enable_ssh
-    open_to_internet   = contains(var.allowed_cidr_blocks, "0.0.0.0/0")
+    imds_vulnerable  = !var.use_imdsv2
+    ssh_enabled      = var.enable_ssh
+    open_to_internet = contains(var.allowed_cidr_blocks, "0.0.0.0/0")
   }
 }
 

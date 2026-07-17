@@ -37,7 +37,7 @@ variable "public_subnet_cidr" {
 variable "allowed_cidr_blocks" {
   description = "CIDR blocks allowed to access the reverse proxy (use your IP for security)"
   type        = list(string)
-  default     = ["0.0.0.0/0"]  # WARNING: Open to all - restrict in production!
+  default     = ["0.0.0.0/0"] # WARNING: Open to all - restrict in production!
 }
 
 #-----------------------------------------
@@ -47,7 +47,7 @@ variable "allowed_cidr_blocks" {
 variable "ec2_instance_type" {
   description = "Instance type for the reverse proxy EC2"
   type        = string
-  default     = "t2.micro"  # Free tier eligible
+  default     = "t2.micro" # Free tier eligible
 }
 
 variable "ssh_key_name" {
@@ -69,7 +69,7 @@ variable "enable_ssh" {
 variable "use_imdsv2" {
   description = "Use IMDSv2 (secure) instead of IMDSv1 (vulnerable). Set to false for vulnerable scenario."
   type        = bool
-  default     = false  # Default: vulnerable (IMDSv1)
+  default     = false # Default: vulnerable (IMDSv1)
 }
 
 variable "enable_bucket_versioning" {
@@ -102,7 +102,7 @@ variable "difficulty" {
   description = "Scenario difficulty: easy, medium, hard"
   type        = string
   default     = "easy"
-  
+
   validation {
     condition     = contains(["easy", "medium", "hard"], var.difficulty)
     error_message = "Difficulty must be one of: easy, medium, hard"

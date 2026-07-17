@@ -1,0 +1,6 @@
+account_id,balance,last_transaction,credit_score,address
+ACC-001,$12,450.00,2024-01-15,750,123 Main St - City - ST 12345
+ACC-002,$8,320.50,2024-01-14,680,456 Oak Ave - Town - ST 67890
+ACC-003,$45,000.00,2024-01-13,720,789 Pine Rd - Village - ST 11223
+ACC-004,$3,200.75,2024-01-12,800,321 Elm St - Metro - ST 44556
+ACC-005,$67,890.25,2024-01-11,650,654 Maple Dr - County - ST 77889

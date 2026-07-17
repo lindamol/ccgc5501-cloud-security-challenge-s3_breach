@@ -1,0 +1,15 @@
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+.terraform.lock.hcl
+crash.log
+
+# Local configuration
+terraform.tfvars
+*.auto.tfvars
+
+# Lab files

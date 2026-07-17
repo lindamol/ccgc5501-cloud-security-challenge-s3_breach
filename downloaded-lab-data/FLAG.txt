@@ -1,0 +1,14 @@
+Congratulations! You have successfully completed the cloud_breach_s3 scenario!
+
+You exploited:
+1. A misconfigured reverse proxy server
+2. Instance Metadata Service (IMDS) exposure
+3. Overly permissive IAM role attached to EC2
+
+Key Takeaways:
+- Always use IMDSv2 with session tokens
+- Configure reverse proxies to only allow specific Host headers
+- Apply least privilege principle to IAM roles
+- Use VPC endpoints for S3 access
+
+Flag: CLOUDGOAT{l8lt4bbu_BREACH_COMPLETE}
